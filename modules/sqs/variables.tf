@@ -1,8 +1,6 @@
 variable "sqs_name" {
-  type = string
-}
-
-
-variable "environment" {
-  type = list(string)
+  type = map(object({
+    name        = string
+    environment = string
+  }))
 }

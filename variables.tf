@@ -1,13 +1,20 @@
 variable "sqs_name" {
-  type    = string
-  default = "poc-edu"
-}
-variable "environment" {
-  type    = list(string)
-  default = ["dev", "qa", "uat"]
-}
-
-variable "count_sqs" {
-    type = number
-    default = null 
+  type = map(object({
+    name        = string
+    environment = string
+  }))
+  default = {
+    "poc-edu-dev" = {
+      name        = "poc-edu-dev"
+      environment = "dev"
+    },
+    "poc-edu-qa" = {
+      name        = "poc-edu-qa"
+      environment = "qa"
+    },
+    "poc-edu-uat" = {
+      name        = "poc-edu-uat"
+      environment = "uat"
+    }
+  }
 }

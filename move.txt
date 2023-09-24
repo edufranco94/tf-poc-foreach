@@ -1,0 +1,3 @@
+terraform state mv module.sqs_test.aws_sqs_queue.terraform_queue[0] module.sqs_test.aws_sqs_queue.terraform_queue["poc-edu-dev"]
+terraform state mv module.sqs_test.aws_sqs_queue.terraform_queue[1] module.sqs_test.aws_sqs_queue.terraform_queue[\"poc-edu-qa\"]
+terraform state mv module.sqs_test.aws_sqs_queue.terraform_queue[2] module.sqs_test.aws_sqs_queue.terraform_queue[\"poc-edu-uat\"]
